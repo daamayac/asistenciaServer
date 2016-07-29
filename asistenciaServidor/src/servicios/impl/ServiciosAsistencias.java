@@ -1,4 +1,4 @@
-package com.g5.asistencia.servicios;
+package servicios.impl;
 
 import java.util.List;
 
