@@ -15,7 +15,8 @@ public class Materia implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private Integer idmateria;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 
 	private String materia;
 
@@ -33,12 +34,12 @@ public class Materia implements Serializable {
 	public Materia() {
 	}
 
-	public Integer getIdmateria() {
-		return this.idmateria;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setIdmateria(Integer idmateria) {
-		this.idmateria = idmateria;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getMateria() {

@@ -15,7 +15,8 @@ public class Asistencia implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private Integer idasistencia;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 
 	private Boolean asistencia;
 
@@ -24,18 +25,18 @@ public class Asistencia implements Serializable {
 
 	//bi-directional many-to-one association to Alumno
 	@ManyToOne
-	@JoinColumn(name="id_alumno")
+	@JoinColumn(name="idalumno")
 	private Alumno alumno;
 
 	public Asistencia() {
 	}
 
-	public Integer getIdasistencia() {
-		return this.idasistencia;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setIdasistencia(Integer idasistencia) {
-		this.idasistencia = idasistencia;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public Boolean getAsistencia() {

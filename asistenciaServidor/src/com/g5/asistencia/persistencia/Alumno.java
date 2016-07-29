@@ -5,6 +5,8 @@ import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -23,8 +25,8 @@ public class Alumno implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="id_alumno")
-	private Integer idAlumno;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 
 	private String apellido;
 
@@ -50,12 +52,12 @@ public class Alumno implements Serializable {
 	public Alumno() {
 	}
 
-	public Integer getIdAlumno() {
-		return this.idAlumno;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setIdAlumno(Integer idAlumno) {
-		this.idAlumno = idAlumno;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getApellido() {

@@ -15,7 +15,8 @@ public class Docente implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	private Integer iddocente;
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer id;
 
 	private String apellido;
 
@@ -32,12 +33,12 @@ public class Docente implements Serializable {
 	public Docente() {
 	}
 
-	public Integer getIddocente() {
-		return this.iddocente;
+	public Integer getId() {
+		return this.id;
 	}
 
-	public void setIddocente(Integer iddocente) {
-		this.iddocente = iddocente;
+	public void setId(Integer id) {
+		this.id = id;
 	}
 
 	public String getApellido() {
